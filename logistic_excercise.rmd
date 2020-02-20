@@ -74,7 +74,8 @@ options(scipen=100)
 graphics.off()
 Sys.setlocale("LC_ALL", "Chinese")
 ```
-#### 选择Zelig包里面的turnout数据集，这个数据集是为了确定投票率与被选举人的种族(race)、年龄(age)、受教育程度(educate)和收入(income)是否有关。因变量vote是0-1型变量，赞成为1，反对为0。种族（race）变量是一个分类型自变量，在进行回归分析时，可以将“white”记为0，“others”记为1.下面对该数据集进行二分类Logistc回归分析。
+### 选择Zelig包里面的turnout数据集，这个数据集是为了确定投票率与被选举人的种族(race)、年龄(age)、受教育程度(educate)和收入(income)是否有关。因变量vote是0-1型变量，赞成为1，反对为0。种族（race）变量是一个分类型自变量，在进行回归分析时，可以将“white”记为0，“others”记为1.下面对该数据集进行二分类Logistc回归分析。
+#### 数据准备和模型建立
 ```{python}
 import numpy as np
 import pandas as pd
@@ -97,9 +98,12 @@ p=Y.sum()/len(Y)#投票比率为0.746
 
 #将数据集随机划分为训练子集和测试子集，并返回划分好的样本和标签
 X_train,X_test,y_train,y_test=train_test_split(X,Y,test_size=0.2,random_state=0)
+#x_train训练集特征值
+#y_train训练集目标值
+#x_test测试集特征值
+#y_text测试集目标值，真实值
 
 #拟合logistic回归方程
-
 results=sm.Logit(y_train,X_train).fit()
 print(results.summary())
 
@@ -109,17 +113,22 @@ $$\log \frac{p}{1-p}=-0.5874 * \text { race }+0.0063 * \text { age }+0.0367 * \t
 $$
 根据输出的结果显示，在显著性水平为0.05下，四个变量的P值均小于0.05，即四个自变量种族、年龄、受教育程度和收入都对是否决定投票都有显著影响。
 
-
-
-
-#### 利用KMsurv包里面的aids数据集，利用Logistic回归分析法调查二分类变量adult与infect、induct的关系。infect和induct变量都为连续型变量。
-
+#### 模型准确率
 ```{python}
-import numpy as np
-import pandas as pd
-import statsmodels.api as sm 
-import statsmodels.formula.api as smf
-from sklearn.model_selection import train_test_split
+#预测数据
+y_predict = results.predict(X_test)
+y_predict
+y_predict = np.where(y_predict>0.5,1,0)
+accuracy = (y_predict==y_test).sum()/len(y_test)
+accuracy
+```
+以0.5作为阈值，预测准确率为0.74，即用种族、年龄、受教育程度和收入这四个变量估计投票的概率是74%， 因为除了被选举人自身的优势之外，一些政治因素也是造成预测准确率不是很高的因素。
+
+
+### 利用KMsurv包里面的aids数据集，利用Logistic回归分析法调查二分类变量adult与infect、induct的关系。infect和induct变量都为连续型变量。
+#### 数据准备和建模
+```{python}
+
 dat = sm.datasets.get_rdataset("aids",package="KMsurv",site="D:/github_repo/Rdatasets").data
 dat
 
@@ -147,10 +156,14 @@ X_new=dat['induct']
 X_train,X_test,y_train,y_test=train_test_split(X_new,Y,test_size=0.2,random_state=0)
 results=sm.Logit(y_train,X_train).fit()
 print(results.summary())
-predictions = 
-results.predict(X_test)  
 ```
 回归方程：
 $$\log \frac{p}{1-p}=0.9269 * \text { induct }$$
 变量induct的P值为0，说明变量induct的影响是显著的。
-
+#### 模型准确率预测
+```{python}
+predict = results.predict(X_test)  
+y_predict2 = np.where(predict>0.5,1,0)
+accuracy2=(y_test==y_predict2).sum()/len(y_test)
+accuracy2#0.847
+```

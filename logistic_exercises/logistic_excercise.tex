@@ -1,0 +1,316 @@
+\documentclass[UTF8,a4paper,12pt]{ctexart}  % Latex 去掉上面的语句，加上本语句
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular]{AdobeSongStd-Light}
+\setCJKfamilyfont{song}{AdobeSongStd-Light}
+\setCJKfamilyfont{hei}{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{kai}{AdobeKaitiStd-Regular}
+\setCJKfamilyfont{fs}{Sun Yat-sen Hsingshu}
+% \setCJKmainfont[BoldFont=SimHei]{SimSun}
+
+
+\renewcommand{\contentsname}{\centerline{\textcolor{violet}{目 \ \ 录}}}    % 将Contents改为目录
+\renewcommand{\abstractname}{摘 \ \ 要}      % 将Abstract改为摘要
+\renewcommand{\refname}{参考文献}            % 将Reference改为参考文献
+\renewcommand\tablename{表}
+\renewcommand\figurename{图}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+
+\usepackage[dvipsnames]{xcolor}
+\PassOptionsToPackage{colorlinks=true,citecolor=blue, urlcolor=blue, linkcolor=violet, bookmarksdepth=4}{hyperref}
+
+\usepackage{lscape}
+\usepackage{indentfirst}
+\usepackage{textcomp}                      % provide many text symbols
+\usepackage{setspace}                      % 各种间距设置
+
+% ---------------------------------Table------------------------------
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}                         % 提供表格中每一列的宽度及位置支持
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%% 参考文献
+\usepackage{gbt7714}
+\usepackage{natbib}
+\setlength{\bibsep}{0.5pt}
+
+
+\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc} % [T1] 主要支持东欧等国家重音符 , 与下面 consolas 冲突
+\usepackage{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+
+\newcommand\hmmax{0} %% 防止Too many math alphabets used in version normal.
+\newcommand\bmmax{0} %% 防止Too many math alphabets used in version normal.
+
+\usepackage{lmodern,bm}   % 必需出现在amsmath等包前面，否则会出错
+\usepackage{amsmath}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{tikz}
+
+\setmonofont{Consolas} % listings 中支持 consolas 字体，必需配合上面\usepackage{fontenc} 中不出现[T1]才可以
+
+\lstset{numbers=left, numberstyle=\ttfamily\tiny\color{Gray}, stepnumber=1, numbersep=8pt,
+  frame=leftline,
+  framexleftmargin=0mm,
+  rulecolor=\color{CadetBlue},
+  backgroundcolor=\color{Periwinkle!20},
+  stringstyle=\color{CadetBlue},
+  flexiblecolumns=false,
+  aboveskip=5pt,
+  belowskip=0pt,
+  language=R,
+  basicstyle=\ttfamily\footnotesize,
+  columns=flexible,
+  keepspaces=true,
+  breaklines=true,
+  extendedchars=true,
+  texcl=false,  % 必须设置为false设置为true的时候 R 代码中不能含有多个注释符号 #
+  upquote=true,
+  showstringspaces=false,
+  keywordstyle=\bfseries,
+  keywordstyle=\color{Purple},
+  xleftmargin=20pt,
+  xrightmargin=10pt,
+  morecomment=[s]{\#}{\#},
+  commentstyle=\color{OliveGreen!60}\scriptsize,
+  tabsize=4}
+
+\tolerance=1000
+
+%======================== 根据选项设置代码处理方式 RMARKDOWN 中独有=============
+
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\passthrough}[1]{\lstset{mathescape=false}#1\lstset{mathescape=true}}
+
+\author{\CJKfamily{kai} 金 \enspace 林 \\ \CJKfamily{kai} 中南财经政法大学统计系 \\ jinlin82@gmail.com}
+% ------------------------Chapter Section Title-------------------------
+%--- 英文期刊标题 -----
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing{\section}{0pt}{1ex plus 1ex minus .2ex}{1ex plus 1ex minus .2ex}
+\titlespacing{\subsection}{0pt}{0.5ex plus 1ex minus .2ex}{0.5ex plus 1ex minus .2ex}
+%--- 中文期刊标题 -----
+% \CTEXsetup[name={,、}, number={\chinese{section}}, aftername={},
+% format={\large \heiti }, indent={24pt},
+% beforeskip={1ex plus 1ex minus .2ex},
+% afterskip={1ex plus 1ex minus .2ex}]
+% {section}
+% \CTEXsetup[name={(,)}, number={\chinese{subsection}}, aftername={},
+% format={\normalsize \bfseries \songti}, indent={\parindent},
+% beforeskip={0.5ex plus 1ex minus .2ex},
+% afterskip={0.5ex plus 1ex minus .2ex}]
+% {subsection}
+% \CTEXsetup[name={,.}, number={\arabic{subsubsection}},
+% aftername={}, format={\normalsize \bfseries \songti},indent={\parindent},
+% beforeskip={0ex plus 1ex minus .2ex},
+% afterskip={0.2ex plus 1ex minus .2ex}]
+% {subsubsection}
+
+% ------------------------Figure and Table Caption---------------------
+%\makeatletter                        % 图表标题格式设置
+%\renewcommand{\fnum@table}[1]{\small \bfseries\textcolor{Violet}{\tablename\thetable~~}}
+%\renewcommand{\fnum@figure}[1]{\small \CJKfamily{hei} \textcolor{Violet}{\figurename\thefigure~~}}
+%\makeatother
+
+\usepackage[skip=0pt, labelsep=quad, font={small, bf}, labelfont={color={Violet}}]{caption}
+
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+\sloppy
+\linespread{1.2}                    % 设置行距
+\setlength{\parindent}{24pt}        % 段落缩进
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\pagestyle {plain}                  % 去掉页眉
+\setcounter{secnumdepth}{4}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{\LARGE\textbf{Logistic回归}}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{王梦圆}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{2020-02}
+
+
+
+\begin{document}
+\maketitle
+
+\hypertarget{zeligturnoutraceageeducateincomevote0-110racewhite0others1.logistc}{%
+\subsubsection{选择Zelig包里面的turnout数据集，这个数据集是为了确定投票率与被选举人的种族(race)、年龄(age)、受教育程度(educate)和收入(income)是否有关。因变量vote是0-1型变量，赞成为1，反对为0。种族（race）变量是一个分类型自变量，在进行回归分析时，可以将``white''记为0，``others''记为1.下面对该数据集进行二分类Logistc回归分析。}\label{zeligturnoutraceageeducateincomevote0-110racewhite0others1.logistc}}
+
+\paragraph{数据准备和模型建立}
+
+\begin{lstlisting}[language=Python]
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm 
+import statsmodels.formula.api as smf
+from sklearn.model_selection import train_test_split
+df = sm.datasets.get_rdataset("turnout",package="Zelig",site="D:/github_repo/Rdatasets").data
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df
+
+#对数据进行处理：去空值，处理分类变量race
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df.isnull().sum()#没有空值
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df['race']=df['race'].replace("white",0)
+df['race']=df['race'].replace("others",1)
+df['race'].unique()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df.index=np.arange(df.shape[0])
+X=df.iloc[:,:4]
+X
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+Y=df['vote']
+p=Y.sum()/len(Y)#投票比率为0.746
+
+#将数据集随机划分为训练子集和测试子集，并返回划分好的样本和标签
+X_train,X_test,y_train,y_test=train_test_split(X,Y,test_size=0.2,random_state=0)
+#x_train训练集特征值
+#y_train训练集目标值
+#x_test测试集特征值
+#y_text测试集目标值，真实值
+
+#拟合logistic回归方程
+results=sm.Logit(y_train,X_train).fit()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+print(results.summary())
+\end{lstlisting}
+
+Logistic回归方程：
+\[\log \frac{p}{1-p}=-0.5874 * \text { race }+0.0063 * \text { age }+0.0367 * \text { educate }+0.1559 * \text { income }
+\]
+根据输出的结果显示，在显著性水平为0.05下，四个变量的P值均小于0.05，即四个自变量种族、年龄、受教育程度和收入都对是否决定投票都有显著影响。
+
+\paragraph{模型准确率}
+
+\begin{lstlisting}[language=Python]
+#预测数据
+y_predict = results.predict(X_test)
+y_predict
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+y_predict = np.where(y_predict>0.5,1,0)
+accuracy = (y_predict==y_test).sum()/len(y_test)
+accuracy
+\end{lstlisting}
+
+以0.5作为阈值，预测准确率为0.74，即用种族、年龄、受教育程度和收入这四个变量估计投票的概率是74\%， 因为除了被选举人自身的优势之外，一些政治因素也是造成预测准确率不是很高的因素。
+
+\hypertarget{kmsurvaidslogisticadultinfectinductinfectinduct}{%
+\subsubsection{利用KMsurv包里面的aids数据集，利用Logistic回归分析法调查二分类变量adult与infect、induct的关系。infect和induct变量都为连续型变量。}\label{kmsurvaidslogisticadultinfectinductinfectinduct}}
+
+\paragraph{数据准备和建模}
+
+\begin{lstlisting}[language=Python]
+
+dat = sm.datasets.get_rdataset("aids",package="KMsurv",site="D:/github_repo/Rdatasets").data
+dat
+
+#对数据进行处理：去空值，处理分类变量race
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+dat.isnull().sum()#没有空值
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+dat.index=np.arange(dat.shape[0])
+X=dat.iloc[:,:2]
+Y=dat['adult']
+p=Y.sum()/len(Y)
+
+#将数据集随机划分为训练子集和测试子集，并返回划分好的样本和标签
+X_train,X_test,y_train,y_test=train_test_split(X,Y,test_size=0.2,random_state=0)
+
+#拟合logistic回归方程
+results=sm.Logit(y_train,X_train).fit()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+print(results.summary())
+\end{lstlisting}
+
+回归方程：
+\[\log \frac{p}{1-p}=0.1037 * \text { infect }+0.7287 * \text { induct }\]
+又因为infect变量的P值为0.103，在显著性水平0.05下，infect变量对因变量adult率影响不显著，因此，除去infect变量后再次进行Logistic回归分析.
+
+\begin{lstlisting}[language=Python]
+X_new=dat['induct']
+X_train,X_test,y_train,y_test=train_test_split(X_new,Y,test_size=0.2,random_state=0)
+results=sm.Logit(y_train,X_train).fit()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+print(results.summary())
+\end{lstlisting}
+
+回归方程：
+\[\log \frac{p}{1-p}=0.9269 * \text { induct }\]
+变量induct的P值为0，说明变量induct的影响是显著的。
+\#\#\#\# 模型准确率预测
+
+\begin{lstlisting}[language=Python]
+predict = results.predict(X_test)  
+y_predict2 = np.where(predict>0.5,1,0)
+accuracy2=(y_test==y_predict2).sum()/len(y_test)
+accuracy2#0.847
+\end{lstlisting}
+
+
+\end{document}

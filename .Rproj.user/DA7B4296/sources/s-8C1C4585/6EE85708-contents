@@ -1,0 +1,6 @@
+library("Zelig")
+install.packages('Zelig')
+install.packages('boot')
+?turnout
+?iris
+?urine

@@ -1,0 +1,549 @@
+\documentclass[UTF8,a4paper,12pt]{ctexart}  % Latex 去掉上面的语句，加上本语句
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular]{AdobeSongStd-Light}
+\setCJKfamilyfont{song}{AdobeSongStd-Light}
+\setCJKfamilyfont{hei}{AdobeHeitiStd-Regular}
+\setCJKfamilyfont{kai}{AdobeKaitiStd-Regular}
+\setCJKfamilyfont{fs}{Sun Yat-sen Hsingshu}
+% \setCJKmainfont[BoldFont=SimHei]{SimSun}
+
+
+\renewcommand{\contentsname}{\centerline{\textcolor{violet}{目 \ \ 录}}}    % 将Contents改为目录
+\renewcommand{\abstractname}{摘 \ \ 要}      % 将Abstract改为摘要
+\renewcommand{\refname}{参考文献}            % 将Reference改为参考文献
+\renewcommand\tablename{表}
+\renewcommand\figurename{图}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+
+\usepackage[dvipsnames]{xcolor}
+\PassOptionsToPackage{colorlinks=true,citecolor=blue, urlcolor=blue, linkcolor=violet, bookmarksdepth=4}{hyperref}
+
+\usepackage{lscape}
+\usepackage{indentfirst}
+\usepackage{textcomp}                      % provide many text symbols
+\usepackage{setspace}                      % 各种间距设置
+
+% ---------------------------------Table------------------------------
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}                         % 提供表格中每一列的宽度及位置支持
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%% 参考文献
+\usepackage{gbt7714}
+\usepackage{natbib}
+\setlength{\bibsep}{0.5pt}
+
+
+\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc} % [T1] 主要支持东欧等国家重音符 , 与下面 consolas 冲突
+\usepackage{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+
+\newcommand\hmmax{0} %% 防止Too many math alphabets used in version normal.
+\newcommand\bmmax{0} %% 防止Too many math alphabets used in version normal.
+
+\usepackage{lmodern,bm}   % 必需出现在amsmath等包前面，否则会出错
+\usepackage{amsmath}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{tikz}
+
+\setmonofont{Consolas} % listings 中支持 consolas 字体，必需配合上面\usepackage{fontenc} 中不出现[T1]才可以
+
+\lstset{numbers=left, numberstyle=\ttfamily\tiny\color{Gray}, stepnumber=1, numbersep=8pt,
+  frame=leftline,
+  framexleftmargin=0mm,
+  rulecolor=\color{CadetBlue},
+  backgroundcolor=\color{Periwinkle!20},
+  stringstyle=\color{CadetBlue},
+  flexiblecolumns=false,
+  aboveskip=5pt,
+  belowskip=0pt,
+  language=R,
+  basicstyle=\ttfamily\footnotesize,
+  columns=flexible,
+  keepspaces=true,
+  breaklines=true,
+  extendedchars=true,
+  texcl=false,  % 必须设置为false设置为true的时候 R 代码中不能含有多个注释符号 #
+  upquote=true,
+  showstringspaces=false,
+  keywordstyle=\bfseries,
+  keywordstyle=\color{Purple},
+  xleftmargin=20pt,
+  xrightmargin=10pt,
+  morecomment=[s]{\#}{\#},
+  commentstyle=\color{OliveGreen!60}\scriptsize,
+  tabsize=4}
+
+\tolerance=1000
+
+%======================== 根据选项设置代码处理方式 RMARKDOWN 中独有=============
+
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\passthrough}[1]{\lstset{mathescape=false}#1\lstset{mathescape=true}}
+
+\author{\CJKfamily{kai} 金 \enspace 林 \\ \CJKfamily{kai} 中南财经政法大学统计系 \\ jinlin82@gmail.com}
+% ------------------------Chapter Section Title-------------------------
+%--- 英文期刊标题 -----
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing{\section}{0pt}{1ex plus 1ex minus .2ex}{1ex plus 1ex minus .2ex}
+\titlespacing{\subsection}{0pt}{0.5ex plus 1ex minus .2ex}{0.5ex plus 1ex minus .2ex}
+%--- 中文期刊标题 -----
+% \CTEXsetup[name={,、}, number={\chinese{section}}, aftername={},
+% format={\large \heiti }, indent={24pt},
+% beforeskip={1ex plus 1ex minus .2ex},
+% afterskip={1ex plus 1ex minus .2ex}]
+% {section}
+% \CTEXsetup[name={(,)}, number={\chinese{subsection}}, aftername={},
+% format={\normalsize \bfseries \songti}, indent={\parindent},
+% beforeskip={0.5ex plus 1ex minus .2ex},
+% afterskip={0.5ex plus 1ex minus .2ex}]
+% {subsection}
+% \CTEXsetup[name={,.}, number={\arabic{subsubsection}},
+% aftername={}, format={\normalsize \bfseries \songti},indent={\parindent},
+% beforeskip={0ex plus 1ex minus .2ex},
+% afterskip={0.2ex plus 1ex minus .2ex}]
+% {subsubsection}
+
+% ------------------------Figure and Table Caption---------------------
+%\makeatletter                        % 图表标题格式设置
+%\renewcommand{\fnum@table}[1]{\small \bfseries\textcolor{Violet}{\tablename\thetable~~}}
+%\renewcommand{\fnum@figure}[1]{\small \CJKfamily{hei} \textcolor{Violet}{\figurename\thefigure~~}}
+%\makeatother
+
+\usepackage[skip=0pt, labelsep=quad, font={small, bf}, labelfont={color={Violet}}]{caption}
+
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
+\sloppy
+\linespread{1.2}                    % 设置行距
+\setlength{\parindent}{24pt}        % 段落缩进
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\pagestyle {plain}                  % 去掉页眉
+\setcounter{secnumdepth}{4}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{\LARGE\textbf{矩阵计算python笔记}}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{王梦圆}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{2020-02}
+
+
+
+\begin{document}
+\maketitle
+
+\section{创建一个向量}
+
+在python中可以用numpy.array()来创建一个向量，例如：
+
+\begin{lstlisting}[language=Python]
+import numpy as np
+x = np.array([1,2,3,4])
+print(x)
+\end{lstlisting}
+
+\section{创建一个矩阵}
+
+在python里面使用numpy创建矩阵有两种方法：第一种：直接法------np.matrix()创建矩阵
+
+\begin{lstlisting}[language=Python]
+x = np.matrix([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
+x
+\end{lstlisting}
+
+第二种：利用np.arange().reshape(shape,order)创建矩阵
+
+\begin{lstlisting}[language=Python]
+x1 = np.arange(12).reshape(3,4)#3行4列矩阵，默认按行排列
+x2 = np.arange(12).reshape(4,3)#4行3列矩阵，按行排列
+x3 = np.arange(12).reshape((4,3),order='F')#按列排列
+\end{lstlisting}
+
+二维数组不能直接定义行名和列名，可以先转化成DataFrame形式，再利用index和columns定义行名和列名
+
+\begin{lstlisting}[language=Python]
+import pandas as pd
+index=['r1','r2','r3']
+columns=['c1','c2','c3','c4']
+x1 = pd.DataFrame(x1,index=index,columns=columns)
+x1
+\end{lstlisting}
+
+\section{矩阵转置}
+
+A为 \emph{m×n} 矩阵，求A的转置在python中可用A.T，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,13).reshape(3,4)
+A
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.T
+\end{lstlisting}
+
+在python里面若想要得到一个行向量，例如：
+
+\begin{lstlisting}[language=Python]
+x = np.array([1,2,3,4,5,6,7,8,9,10]).reshape((1,-1))
+type(x)
+\end{lstlisting}
+
+利用x.T,可以得到一个列向量，例如
+
+\begin{lstlisting}[language=Python]
+x.T
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+(x.T).shape
+\end{lstlisting}
+
+在python里面若想要得到一个列向量，例如：
+
+\begin{lstlisting}[language=Python]
+x = np.array([1,2,3,4,5,6,7,8,9,10]).reshape((-1,1))
+x.shape
+\end{lstlisting}
+
+\section{矩阵相加减}
+
+在python中对同行同列矩阵相加减，可用符号：``＋''、``－''，例如：
+
+\begin{lstlisting}[language=Python]
+A = B = np.arange(1,13).reshape((3,4),order='F')
+A+B
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A-B
+\end{lstlisting}
+
+\section{数与矩阵相乘}
+
+\textbf{A}为 \emph{m×n} 矩阵，c\textgreater{}0，在python中求c\textbf{A}可用符号：``*''，例如：
+
+\begin{lstlisting}[language=Python]
+c =2
+c*A
+\end{lstlisting}
+
+\section{矩阵相乘}
+
+\textbf{A}为m×n矩阵，\textbf{B}为n×k矩阵，在python中求\textbf{AB}可用np.dot()，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,13).reshape((3,4),order='F')
+B = np.arange(1,13).reshape((4,3),order='F')
+np.dot(A,B)
+\end{lstlisting}
+
+\section{矩阵对角元素相关运算}
+
+例如要取一个方阵的对角元素，
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,17).reshape((4,4),order='F')
+np.diag(A)
+\end{lstlisting}
+
+对一个向量应用np.diag()函数将产生以这个向量为对角元素的对角矩阵，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,17).reshape((4,4),order='F')
+np.diag(np.diag(A))
+\end{lstlisting}
+
+对一个正整数z应用np.identity()函数将产生以z维单位矩阵，例如：
+
+\begin{lstlisting}[language=Python]
+np.identity(3)
+\end{lstlisting}
+
+\section{矩阵求逆}
+
+矩阵求逆可用函数np.linalg.inv()，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.random.normal(0,1,(4,4))
+np.linalg.inv(A)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.dot(np.linalg.inv(A),A)
+\end{lstlisting}
+
+\section{矩阵的特征值与特征向量}
+
+矩阵 \emph{A} 的谱分解为\textbf{A=UΛU'},其中 \emph{Λ} 是由 \emph{A} 的特征值组成的对角矩阵，\emph{U} 的列为 \emph{A} 的特征值对应的特征向量，在python中可以用函数np.linalg.eig()函数得到U和Λ
+
+\begin{lstlisting}[language=Python]
+A = np.identity(4)+1
+A_eig = np.linalg.eig(A)
+Λ = np.diag(A_eig[0])
+U = A_eig[1]
+Λ,U
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.dot(np.dot(U,Λ),U.T)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.dot(U.T,U)
+\end{lstlisting}
+
+\hypertarget{choleskey}{%
+\section{矩阵的Choleskey分解}\label{choleskey}}
+
+对于正定矩阵\textbf{A}，可对其进行Choleskey分解，即：\textbf{A=PP'}，其中P为下三角矩阵，在python中可以用函数np.linalg.cholesky()进行Choleskey分解，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.identity(4)+1
+cho = np.linalg.cholesky(A)
+np.dot(cho,cho.T)
+\end{lstlisting}
+
+若矩阵为对称正定矩阵，可以利用Choleskey分解求行列式的值，如：
+
+\begin{lstlisting}[language=Python]
+np.prod(np.diag(cho)**2)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.linalg.det(A)
+\end{lstlisting}
+
+\section{矩阵奇异值分解}
+
+\textbf{A}为 \emph{m×n} 矩阵，rank(A)= r, 可以分解为：\textbf{A=UDV'},其中\textbf{U'U=V'V=I}。在python中可以用函数scd()进行奇异值分解，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,19).reshape((3,6),order='F')
+A
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+d = np.linalg.svd(A,full_matrices=0)[1]
+d
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+u = np.linalg.svd(A,full_matrices=0)[0]
+u
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+v = np.linalg.svd(A,full_matrices=0)[2]
+v
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.dot(np.dot(u,np.diag(d)),v)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.dot(u.T,u,out=None,)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.dot(v,v.T)
+\end{lstlisting}
+
+\hypertarget{qr}{%
+\section{矩阵QR分解}\label{qr}}
+
+\textbf{A}为\emph{m×n}矩阵可以进行\emph{QR}分解，\textbf{A=QR}，其中：\textbf{Q'Q＝I}，在python中可以用函数qr()进行QR分解，得到Q矩阵和R矩阵，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,17).reshape((4,4),order='F')
+qr = np.linalg.qr(A)
+Q = qr[0]
+R = qr[1]
+np.dot(Q,R)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.dot(Q.T,Q)
+\end{lstlisting}
+
+\hypertarget{moore-penrose}{%
+\section{矩阵广义逆（Moore-Penrose）}\label{moore-penrose}}
+
+\emph{n×m}矩阵 \textbf{A+} 称为\emph{m×n}矩阵\textbf{A}的Moore-Penrose逆，如果它满足下列条件：\textbf{①A A+A=A；②A+A A+= A+；③(A A+)H=A A+；④(A+A)H= A+A}
+在python中可用np.linalg.pinv()函数，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,17).reshape((4,4),order='F')
+MP = np.linalg.pinv(A)#广义逆
+\end{lstlisting}
+
+验证性质1：
+
+\begin{lstlisting}[language=Python]
+np.dot(np.dot(A,MP),A)
+\end{lstlisting}
+
+验证性质2：
+
+\begin{lstlisting}[language=Python]
+np.dot(np.dot(MP,A),MP)
+\end{lstlisting}
+
+验证性质3：
+
+\begin{lstlisting}[language=Python]
+np.dot(A,MP).T
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.dot(A,MP)
+\end{lstlisting}
+
+验证性质4：
+
+\begin{lstlisting}[language=Python]
+np.dot(MP,A).T
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.dot(MP,A)
+\end{lstlisting}
+
+\hypertarget{kronecker}{%
+\section{矩阵Kronecker积}\label{kronecker}}
+
+n×m矩阵A与h×k矩阵B的kronecker积为一个nh×mk维矩阵，公式为：
+\[
+\mathbf{A}_{m \times n} \otimes \mathbf{B}_{h \times k}=\left(\begin{array}{ccc}
+a_{11} \mathbf{B} & \cdots & a_{1 n} \mathbf{B} \\
+\vdots & \vdots & \vdots \\
+a_{m 1} \mathbf{B} & \cdots & a_{m n} \mathbf{B}
+\end{array}\right)_{m h \times nh }
+\]
+在python中kronecker积可以用函数np.kron()来计算，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,5).reshape((2,2),order='F')
+B = np.ones((2,2))
+A
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+B
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+np.kron(A,B)
+\end{lstlisting}
+
+\section{矩阵的维数}
+
+在python中可以直接利用(matrix).shape得到矩阵的维数
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,13).reshape((3,4),order='F')
+A
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.shape
+\end{lstlisting}
+
+\section{矩阵的行和、列和、行平均与列平均}
+
+在python中很容易求得一个矩阵的各行的和、平均数与列的和、平均数，例如：
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,13).reshape((3,4),order='F')
+A
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.sum(axis=1)#行和
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.mean(axis=1)#行平均
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.sum(axis=0)#列和
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.mean(axis=0)#列平均
+\end{lstlisting}
+
+\hypertarget{xx}{%
+\section{矩阵X'X的逆}\label{xx}}
+
+在统计计算中，我们常常需要计算这样矩阵的逆，如OLS估计中求系数矩阵。R中的包``strucchange''提供了有效的计算方法。
+
+\begin{lstlisting}[language=Python]
+A = np.arange(1,13).reshape((3,4),order='F')
+A
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.sum(axis=1)#行和
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.mean(axis=1)#行平均
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.sum(axis=0)#列和
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+A.mean(axis=0)#列平均
+\end{lstlisting}
+
+
+\end{document}

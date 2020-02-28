@@ -191,7 +191,7 @@ np.prod(np.diag(cho)**2)
 np.linalg.det(A)
 ```
 # 矩阵奇异值分解
-**A**为 *m×n* 矩阵，rank(A)= r, 可以分解为：**A=UDV'**,其中**U'U=V'V=I**。在python中可以用函数scd()进行奇异值分解，例如：
+**A**为 *m×n* 矩阵，rank(A)= r, 可以分解为：**A=UDV'**,其中**U'U=V'V=I**。在python中可以用函数np.linalg.svd()进行奇异值分解，例如：
 ```{python}
 A = np.arange(1,19).reshape((3,6),order='F')
 A
@@ -301,7 +301,7 @@ np.linalg.solve(np.triu(A,0).T,x)#系数矩阵为上三角矩阵的转置矩阵
 np.linalg.solve(np.tril(A,0).T,x)#系数矩阵为下三角矩阵的转置矩阵
 ```
 # where函数
-在python中定义了的这个函数用于取矩阵元素的行和列下标矩阵，例如矩阵$\mathbf{A}=\left\{a_{i j}\right\}_{m \times n}$，where函数将返回两个数组，分别是该矩阵的第i行第j列元素为i和该矩阵的第i行第j列元素为j。例如：
+在python中定义了的这个函数用于取矩阵元素的行和列下标矩阵，例如矩阵$\mathbf{A}=\left\{a_{i j}\right\}_{m \times n}$，np.where函数将返回两个数组，分别是该矩阵的第i行第j列元素为i和该矩阵的第i行第j列元素为j。例如：
 ```{python}
 A = np.arange(1,13).reshape((3,4),order='F')
 A
@@ -336,11 +336,24 @@ vech = x.flatten('C')
 vech
 ```
 # 时间序列的滞后性
-在时间序列分析中，我们常常要用到一个序列的滞后序列,x为一个数组，
-k为正整数，k+1代表滞后阶数，若trim为假，则返回序列与原序列长度相同，
-但含有NA值；若trim项为真，则返回序列中不含有NA值。
+在时间序列分析中，我们常常要用到一个序列的滞后序列,令x为一个数组，k为正整数，代表滞后阶数，若trim为假，则返回序列与原序列长度相同，但含有NA值；若trim项为真，则返回序列中不含有NA值。
 ```{python}
-def tslag(x,k,trim=False):
-
+import pandas as pd
+x = np.arange(20,dtype=float)
+y = pd.DataFrame(index=None)
+z = pd.DataFrame(index=None)
+def tslag(x,k,trim):
+  if trim==False:
+    for k in np.arange(4):
+      x[0:k] = None
+      y[k+1] = x[0:20]
+    return(y)
+  if trim==True:
+    for k in np.arange(4):
+      z[k+1] = x[4-k:20-k]
+    return z
+x = np.arange(20,dtype=float)
+tslag(x,k,trim=True)
+tslag(x,k,trim=False)
 
 ```

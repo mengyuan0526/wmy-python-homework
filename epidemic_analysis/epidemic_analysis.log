@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.8)  29 FEB 2020 22:43
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.8)  1 MAR 2020 20:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1317,8 +1317,7 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 Package: xeCJK-listings 2019/04/07 v3.7.2 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count353
 \l__xeCJK_listings_flag_int=\count354
-)
-No file epidemic_analysis.aux.
+) (./epidemic_analysis.aux)
 \openout1 = `epidemic_analysis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 176.
@@ -1355,11 +1354,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 176.
 LaTeX Info: Redefining \pageref on input line 176.
 LaTeX Info: Redefining \nameref on input line 176.
+(./epidemic_analysis.out) (./epidemic_analysis.out)
 \@outlinefile=\write4
 \openout4 = `epidemic_analysis.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 \c@lstlisting=\count356
 ABD: EveryShipout initializing macros
@@ -1430,21 +1427,72 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
+[1
 
-LaTeX Warning: File `./表1.png' not found on input line 202.
+]
+File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
+les/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+<use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
+es/figure-latex/unnamed-chunk-6-1.pdf>
+File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
+les/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
+<use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
+es/figure-latex/unnamed-chunk-7-1.pdf>
+[2]
+File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
+les/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf)
+<use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
+es/figure-latex/unnamed-chunk-9-1.pdf>
+[3]
+File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
+les/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
+<use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
+es/figure-latex/unnamed-chunk-10-1.pdf>
+[4]
+File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
+les/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
+<use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
+es/figure-latex/unnamed-chunk-11-1.pdf>
+[5]
+File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
+les/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
+<use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
+es/figure-latex/unnamed-chunk-12-1.pdf>
+[6] [7]
+File: ./world_map.png Graphic file (type bmp)
+<./world_map.png>
 
-! Unable to load picture or PDF file './表1.png'.
-<to be read again> 
-                   }
-l.202 \includegraphics{./表1.png}
-                                 
+Overfull \hbox (402.92183pt too wide) in paragraph at lines 444--445
+ [][] 
+ []
+
+[8]
+File: ./fig7.png Graphic file (type bmp)
+<./fig7.png>
+
+Overfull \hbox (275.83192pt too wide) in paragraph at lines 502--503
+ [][] 
+ []
+
+[9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 507.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 507.
+(./epidemic_analysis.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 507.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 507.
+Package rerunfilecheck Info: File `epidemic_analysis.out' has not changed.
+(rerunfilecheck)             Checksum: DF7DC67DEEEA5CE28FC32CD1680F95CA.
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 40754 strings out of 492922
- 804319 string characters out of 6136751
- 1120372 words of memory out of 5000000
- 44200 multiletter control sequences out of 15000+600000
- 533453 words of font info for 69 fonts, out of 8000000 for 9000
+ 40950 strings out of 492922
+ 811136 string characters out of 6136751
+ 1215677 words of memory out of 5000000
+ 44373 multiletter control sequences out of 15000+600000
+ 533493 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 55i,3n,68p,2592b,1316s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,6n,68p,2592b,1836s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-No pages of output.
+Output written on epidemic_analysis.pdf (10 pages).

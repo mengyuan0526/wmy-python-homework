@@ -73,13 +73,6 @@
 
 ## plt.legend(loc = 'upper left',fontsize = 20)
 
-## plt.show()
-
-## #可以看出，目前新冠肺炎确诊病例还在持续增加，不过令人高兴的是治愈数也在持续增长，死亡数很少
-
-
-## 
-## #下面看看新冠肺炎的死亡率，首先计算死亡率数据，然后就可以直接画图
 
 ## death_rate = (all_deaths/all_confirmed)*100
 
@@ -96,9 +89,6 @@
 ## plt.title('全球疫情死亡率',size =30)
 
 
-## 
-## #由于本次疫情主要发生在中国大陆，下面来具体研究下中国大陆的疫情情况，首先从全部数据中提取出中国大陆的数据。里面包含了省份，以及每个省最新的确诊数，治愈数，死亡数。
-
 ## last_update = '2/28/20' #设置最新数据日期
 
 ## China_cases = confirmed[['Province/State',last_update]][confirmed['Country/Region']=='Mainland China']
@@ -113,8 +103,6 @@
 
 ## China_cases
 
-
-## #下面画出中国大陆每个省份的疫情数量图
 
 ## Mianland_China = China_cases.sort_values(by='confirmed',ascending=True)
 
@@ -132,10 +120,6 @@
 
 ## plt.legend(bbox_to_anchor = (0.95,0.95),fontsize = 20)
 
-## #可以看到，湖北省三项数据高居第一位，且远远高于其他省份。
-
-
-## #下面看看中国大陆的治愈率和死亡率数据，数据使用下面的代码即可计算出来，最终结果在recover_rate和death_rate里。
 
 ## confirmed_China = confirmed[confirmed['Country/Region']=='Mainland China']
 
@@ -171,10 +155,6 @@
 
 ## plt.legend(loc = 'upper left',fontsize = 20)
 
-## #虽然在1月25日-1月31日期间死亡率略高于治愈率，但其他时间段，治愈率远远高于死亡率
-
-
-## #那中国大陆其他地区这一情况咋样呢？代码大同小异，我们一起来看看，首先还是提取出其他地区的数据。
 
 ## confirmed_others = confirmed[confirmed['Country/Region'] != 'Mainland China']
 
@@ -211,8 +191,6 @@
 ## plt.legend(loc = 'upper left',fontsize = 20)
 
 
-## #接下来看看其他地区疫情数量。首先还是提出其他地区的数据
-
 ## others = confirmed[['Country/Region',last_update]][confirmed['Country/Region'] != 'Mainland China']
 
 ## others['recovered'] = recovered[[last_update]][recovered['Country/Region'] != 'Mainland China']
@@ -242,11 +220,6 @@
 
 ## plt.legend(bbox_to_anchor=(0.95,0.95),fontsize = 20)
 
-## plt.show()
-
-## #从图可以看到，韩国，意大利，日本这些地区也有很多新冠肺炎患者。
-
-## 
 
 ## import folium
 

@@ -1,14 +1,14 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.10.8)  1 MAR 2020 20:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.8)  3 MAR 2020 10:25
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**epidemic_analysis.tex
-(./epidemic_analysis.tex
+**d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex
+(d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex
 LaTeX2e <2018-12-01>
-(c:/texlive/2019/texmf-dist/tex/latex/ctex/ctexart.cls (c:/texlive/2019/texmf-d
-ist/tex/latex/l3kernel/expl3.sty
+(c:/texlive/2019/texmf-dist/tex/latex/ctex/ctexart.cls (c:/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2019-04-06 L3 programming layer (loader) 
-(c:/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+ (c:/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2019-04-06 L3 programming layer (code)
 \c_max_int=\count80
 \l_tmpa_int=\count81
@@ -53,62 +53,65 @@ Package: expl3 2019-04-06 L3 programming layer (code)
 \c__fp_Bigg_leading_shift_int=\count101
 \c__fp_Bigg_middle_shift_int=\count102
 \c__fp_Bigg_trailing_shift_int=\count103
-\g__fp_array_int=\count104
-\l__fp_array_loop_int=\count105
-\l__sort_length_int=\count106
-\l__sort_min_int=\count107
-\l__sort_top_int=\count108
-\l__sort_max_int=\count109
-\l__sort_true_max_int=\count110
-\l__sort_block_int=\count111
-\l__sort_begin_int=\count112
-\l__sort_end_int=\count113
-\l__sort_A_int=\count114
-\l__sort_B_int=\count115
-\l__sort_C_int=\count116
-\l__tl_analysis_normal_int=\count117
-\l__tl_analysis_index_int=\count118
-\l__tl_analysis_nesting_int=\count119
-\l__tl_analysis_type_int=\count120
-\l__regex_internal_a_int=\count121
-\l__regex_internal_b_int=\count122
-\l__regex_internal_c_int=\count123
-\l__regex_balance_int=\count124
-\l__regex_group_level_int=\count125
-\l__regex_mode_int=\count126
-\c__regex_cs_in_class_mode_int=\count127
-\c__regex_cs_mode_int=\count128
-\l__regex_catcodes_int=\count129
-\l__regex_default_catcodes_int=\count130
-\c__regex_catcode_L_int=\count131
-\c__regex_catcode_O_int=\count132
-\c__regex_catcode_A_int=\count133
-\c__regex_all_catcodes_int=\count134
-\l__regex_show_lines_int=\count135
-\l__regex_min_state_int=\count136
-\l__regex_max_state_int=\count137
-\l__regex_left_state_int=\count138
-\l__regex_right_state_int=\count139
-\l__regex_capturing_group_int=\count140
-\l__regex_min_pos_int=\count141
-\l__regex_max_pos_int=\count142
-\l__regex_curr_pos_int=\count143
-\l__regex_start_pos_int=\count144
-\l__regex_success_pos_int=\count145
-\l__regex_curr_char_int=\count146
-\l__regex_curr_catcode_int=\count147
-\l__regex_last_char_int=\count148
-\l__regex_case_changed_char_int=\count149
-\l__regex_curr_state_int=\count150
-\l__regex_step_int=\count151
-\l__regex_min_active_int=\count152
-\l__regex_max_active_int=\count153
-\l__regex_replacement_csnames_int=\count154
-\l__regex_match_count_int=\count155
-\l__regex_min_submatch_int=\count156
-\l__regex_submatch_int=\count157
-\l__regex_zeroth_submatch_int=\count158
-\g__regex_trace_regex_int=\count159
+\c__kernel_randint_max_int=\count104
+\g__fp_array_int=\count105
+\l__fp_array_loop_int=\count106
+\l__sort_length_int=\count107
+\l__sort_min_int=\count108
+\l__sort_top_int=\count109
+\l__sort_max_int=\count110
+\l__sort_true_max_int=\count111
+\l__sort_block_int=\count112
+\l__sort_begin_int=\count113
+\l__sort_end_int=\count114
+\l__sort_A_int=\count115
+\l__sort_B_int=\count116
+\l__sort_C_int=\count117
+\l__tl_analysis_normal_int=\count118
+\l__tl_analysis_index_int=\count119
+\l__tl_analysis_nesting_int=\count120
+\l__tl_analysis_type_int=\count121
+\l__regex_internal_a_int=\count122
+\l__regex_internal_b_int=\count123
+\l__regex_internal_c_int=\count124
+\l__regex_balance_int=\count125
+\l__regex_group_level_int=\count126
+\l__regex_mode_int=\count127
+\c__regex_cs_in_class_mode_int=\count128
+\c__regex_cs_mode_int=\count129
+\l__regex_catcodes_int=\count130
+\l__regex_default_catcodes_int=\count131
+\c__regex_catcode_D_int=\count132
+\c__regex_catcode_S_int=\count133
+\c__regex_catcode_L_int=\count134
+\c__regex_catcode_O_int=\count135
+\c__regex_catcode_A_int=\count136
+\c__regex_all_catcodes_int=\count137
+\l__regex_show_lines_int=\count138
+\l__regex_min_state_int=\count139
+\l__regex_max_state_int=\count140
+\l__regex_left_state_int=\count141
+\l__regex_right_state_int=\count142
+\l__regex_capturing_group_int=\count143
+\l__regex_min_pos_int=\count144
+\l__regex_max_pos_int=\count145
+\l__regex_curr_pos_int=\count146
+\l__regex_start_pos_int=\count147
+\l__regex_success_pos_int=\count148
+\l__regex_curr_char_int=\count149
+\l__regex_curr_catcode_int=\count150
+\l__regex_last_char_int=\count151
+\l__regex_case_changed_char_int=\count152
+\l__regex_curr_state_int=\count153
+\l__regex_step_int=\count154
+\l__regex_min_active_int=\count155
+\l__regex_max_active_int=\count156
+\l__regex_replacement_csnames_int=\count157
+\l__regex_match_count_int=\count158
+\l__regex_min_submatch_int=\count159
+\l__regex_submatch_int=\count160
+\l__regex_zeroth_submatch_int=\count161
+\g__regex_trace_regex_int=\count162
 \c_empty_box=\box27
 \l_tmpa_box=\box28
 \l_tmpb_box=\box29
@@ -118,15 +121,7 @@ Package: expl3 2019-04-06 L3 programming layer (code)
 \l__box_bottom_dim=\dimen110
 \l__box_left_dim=\dimen111
 \l__box_right_dim=\dimen112
-\l__box_top_new_dim=\dimen113
-\l__box_bottom_new_dim=\dimen114
-\l__box_left_new_dim=\dimen115
-\l__box_right_new_dim=\dimen116
-\l__box_internal_box=\box32
-\l__coffin_internal_box=\box33
-\l__coffin_internal_dim=\dimen117
-\l__coffin_offset_x_dim=\dimen118
-\l__coffin_offset_y_dim=\dimen119
+\l__box_top_new_dim=\dimen1dimen119
 \l__coffin_x_dim=\dimen120
 \l__coffin_y_dim=\dimen121
 \l__coffin_x_prime_dim=\dimen122
@@ -1434,52 +1429,51 @@ File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
 les/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
 <use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
 es/figure-latex/unnamed-chunk-6-1.pdf>
+[2]
 File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
 les/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
 es/figure-latex/unnamed-chunk-7-1.pdf>
-[2]
 File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
 les/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf)
 <use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
 es/figure-latex/unnamed-chunk-9-1.pdf>
-[3]
+[3] [4]
 File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
 les/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
 <use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
 es/figure-latex/unnamed-chunk-10-1.pdf>
-[4]
+[5] [6]
 File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
 les/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
 <use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
 es/figure-latex/unnamed-chunk-11-1.pdf>
-[5]
 File: d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fi
 les/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
 <use d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis_fil
 es/figure-latex/unnamed-chunk-12-1.pdf>
-[6] [7]
+[7] [8]
 File: ./world_map.png Graphic file (type bmp)
 <./world_map.png>
 
-Overfull \hbox (402.92183pt too wide) in paragraph at lines 444--445
+Overfull \hbox (402.92183pt too wide) in paragraph at lines 488--489
  [][] 
  []
 
-[8]
+[9]
 File: ./fig7.png Graphic file (type bmp)
 <./fig7.png>
 
-Overfull \hbox (275.83192pt too wide) in paragraph at lines 502--503
+Overfull \hbox (275.83192pt too wide) in paragraph at lines 546--547
  [][] 
  []
 
-[9] [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 507.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 507.
+[10] [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 551.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 551.
 (./epidemic_analysis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 507.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 507.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 551.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 551.
 Package rerunfilecheck Info: File `epidemic_analysis.out' has not changed.
 (rerunfilecheck)             Checksum: DF7DC67DEEEA5CE28FC32CD1680F95CA.
 
@@ -1487,12 +1481,959 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 40950 strings out of 492922
- 811136 string characters out of 6136751
- 1215677 words of memory out of 5000000
- 44373 multiletter control sequences out of 15000+600000
+ 40960 strings out of 492922
+ 811284 string characters out of 6136751
+ 1226841 words of memory out of 5000000
+ 44383 multiletter control sequences out of 15000+600000
  533493 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 55i,6n,68p,2592b,1836s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,6n,68p,2592b,1838s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on epidemic_analysis.pdf (10 pages).
+Output written on epidemic_analysis.pdf (11 pages).
+eX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 176.
+LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 176.
+ (c:/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 176.
+ (c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count336
+\scratchdimen=\dimen319
+\scratchbox=\box84
+\nofMPsegments=\count337
+\nofMParguments=\count338
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count339
+\MPscratchDim=\dimen320
+\MPnumerator=\count340
+\makeMPintoPDFobject=\count341
+\everyMPtoPDFconversion=\toks55
+) (c:/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (c:/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (c:/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\AtBeginShipoutBox=\box85
+Package hyperref Info: Link coloring ON on input line 176.
+ (c:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+ (c:/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count342
+)
+LaTeX Info: Redefining \ref on input line 176.
+LaTeX Info: Redefining \pageref on input line 176.
+LaTeX Info: Redefining \nameref on input line 176.
+ (d:\github_repo\wmy-python-homework\epidemic_analysis/epidemic_analysis.out) (d:\github_repo\wmy-python-homework\epidemic_analysis/epidemic_analysis.out)
+\@outlinefile=\write4
+\openout4 = `epidemic_analysis.out'.
+
+\c@lstlisting=\count343
+ ABD: EveryShipout initializing macros
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=731.23584pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2019/texmf-dist/tex/generic/ctex/zhwindowsfonts.tex
+File: zhwindowsfonts.tex 2019/04/07 v2.4.15 Windows font map loader for pdfTeX and DVIPDFMx (CTEX)
+) [1
+
+]
+LaTeX Font Info:    Try loading font information for C70+rm on input line 177.
+ (c:/texlive/2019/texmf-dist/tex/latex/ctex/fd/c70rm.fd
+File: c70rm.fd 2019/04/07 v2.4.15 Chinese font definition (CTEX)
+)
+Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (quanjiao) on input line 177.
+ (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/02/27 1.8b listings language file
+)
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 183.
+ (c:/texlive/2019/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 187.
+ (c:/texlive/2019/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+LaTeX Font Info:    Try loading font information for C70+zhfs on input line 222.
+(c:/texlive/2019/texmf-dist/tex/latex/zhmetrics/c70zhfs.fd
+File: c70zhfs.fd 2009/09/23 4.8.2
+)
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Bad character code (-80).
+<argument> \@tempcnta 
+                      
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Bad character code (-80).
+<argument> \@tempcnta 
+                      
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Bad character code (-80).
+<argument> \@tempcnta 
+                      
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Bad character code (-80).
+<argument> \@tempcnta 
+                      
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Bad character code (-80).
+<argument> \@tempcnta 
+                      
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Bad character code (-80).
+<argument> \@tempcnta 
+                      
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A character number must be between 0 and 255.
+I changed this one to zero.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A one-character control sequence belongs after a ` mark.
+So I'm essentially inserting \0 here.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing = inserted for \ifnum.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   �
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222: Improper alphabetic constant.
+<to be read again> 
+                   \lst@EC� 
+l.222 ...['SimHei']#用来正常显示中文标签
+                                                  
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 39933 strings out of 492623
+ 709403 string characters out of 6133290
+ 983766 words of memory out of 5000000
+ 43099 multiletter control sequences out of 15000+600000
+ 577572 words of font info for 107 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,5n,63p,2645b,1581s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+d:/github_repo/wmy-python-homework/epidemic_analysis/epidemic_analysis.tex:222:  ==> Fatal error occurred, no output PDF file produced!

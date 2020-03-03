@@ -2,13 +2,11 @@
 
 ## import pandas as pd
 
-## import matplotlib.pyplot as plt
+## confirmed = pd.read_csv('./COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv')
 
-## confirmed = pd.read_csv('../data/COVID-20/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv')
+## recovered = pd.read_csv('./COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv')
 
-## recovered = pd.read_csv('../data/COVID-20/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv')
-
-## deaths = pd.read_csv('../data/COVID-20/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv')
+## deaths = pd.read_csv('./COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv')
 
 
 ## c1 = confirmed.head(5)
@@ -29,6 +27,8 @@
 ## print(deaths.shape)
 
 
+## import matplotlib.pyplot as plt
+
 ## plt.rcParams['font.sans-serif'] = ['SimHei']#用来正常显示中文标签
 
 ## plt.rcParams['axes.unicode_minus'] = False#用来正常显示负号
@@ -36,12 +36,10 @@
 ## 
 ## countries = confirmed['Country/Region'].unique()
 
-## print(countries)#可以看出一共75个国家/地区都有新冠状肺炎病例
+## print(countries)#可以看出一共49个国家/地区都有新冠状肺炎病例
 
 ## 
 ## #计算出每日所有地区新冠肺炎的确诊数，治愈数，死亡数
-
-## plt.figure(figsize=(18,10))
 
 ## all_confirmed = np.sum(confirmed.iloc[:,4:])
 
@@ -49,55 +47,49 @@
 
 ## all_deaths = np.sum(deaths.iloc[:,4:])
 
-## all_confirmed.index = [d[:-3] for d in all_confirmed.index]
+## all_confirmed
 
-## all_recovered.index = [d[:-3] for d in all_recovered.index]
+## 
+## 
+## plt.plot(all_confirmed,color = 'red',label = '确诊',marker = 'o')
 
-## all_deaths.index = [d[:-3] for d in all_deaths.index]
+## plt.plot(all_recovered,color = 'blue',label = '治愈',marker = 'o')
 
-## plt.plot(all_confirmed,color = 'red',label = '确诊',marker = 'o',linewidth=2,markersize=3)
+## plt.plot(all_deaths,color = 'lime',label = '死亡',marker = 'o')
 
-## plt.plot(all_recovered,color = 'blue',label = '治愈',marker = 'o',linewidth=2,markersize=3)
+## plt.xticks(rotation = 45,size = 10)
 
-## plt.plot(all_deaths,color = 'lime',label = '死亡',marker = 'o',linewidth=2,markersize=3)
+## plt.yticks(size = 10)
 
-## plt.xticks(rotation = 45,size = 20)
+## plt.xlabel('时间')
 
-## plt.yticks(size = 20)
+## plt.ylabel('数目')
 
-## plt.xlabel('时间',size = 30)
+## plt.title('全球疫情变化趋势',size = 30)
 
-## plt.ylabel('数目',size = 30)
-
-## plt.legend(loc = 'upper left',fontsize = 15)
+## plt.legend(loc = 'upper left',fontsize = 8)
 
 ## plt.tight_layout()
 
 ## plt.show()
 
-
-## plt.figure(figsize=(18,10))
 
 ## death_rate = (all_deaths/all_confirmed)*100
 
-## death_rate
+## plt.plot(death_rate,color = 'lime',label = '死亡',marker = 'o')
 
-## plt.plot(death_rate,color = 'lime',label = '死亡',marker = 'o',linewidth=2,markersize=3)
+## plt.xticks(rotation = 45,size = 10)
 
-## plt.xticks(rotation = 45,size = 25)
+## plt.yticks(size = 15)
 
-## plt.yticks(size = 30)
+## plt.xlabel('时间',size = 20)
 
-## plt.xlabel('时间',fontsize = 30)
+## plt.ylabel('死亡率',size = 20)
 
-## plt.ylabel('死亡率',fontsize = 30)
-
-## plt.tight_layout()
-
-## plt.show()
+## plt.title('全球疫情死亡率',size =30)
 
 
-## last_update = '3/2/20' #设置最新数据日期
+## last_update = '2/28/20' #设置最新数据日期
 
 ## China_cases = confirmed[['Province/State',last_update]][confirmed['Country/Region']=='Mainland China']
 
@@ -116,19 +108,17 @@
 
 ## Mianland_China.plot(kind='barh',figsize=(20,30),color = ['red','blue','lime'],width = 1,rot = 2)
 
-## plt.xlabel('省/市',size = 30)
+## plt.title('中国大陆各省市疫情数量',size = 30)
 
-## plt.ylabel('数量',size = 30)
+## plt.xlabel('省/市',size = 20)
 
-## plt.xticks(size = 25)
+## plt.ylabel('数量',size = 20)
 
-## plt.yticks(size = 30)
+## plt.xticks(size = 15)
+
+## plt.yticks(size = 20)
 
 ## plt.legend(bbox_to_anchor = (0.95,0.95),fontsize = 20)
-
-## plt.tight_layout()
-
-## plt.show()
 
 
 ## confirmed_China = confirmed[confirmed['Country/Region']=='Mainland China']
@@ -147,29 +137,21 @@
 
 ## deaths_rate = (deaths_China/confirmed_China)*100#中国各地区的死亡率
 
-## deaths_rate.index = [d[:-3] for d in deaths_rate.index]
-
-## deaths_rate
-
-## recover_rate.index = [d[:-3] for d in recover_rate.index]
-
-## recover_rate
-
 ## #接下来画图
 
-## #plt.figure(figsize=(10,18))
+## plt.plot(recover_rate,color = 'blue',label = '治愈率',marker = 'o')
 
-## plt.plot(recover_rate,color = 'blue',label = '治愈率',marker = 'o',linewidth=2,markersize=3)
+## plt.plot(deaths_rate,color = 'lime',label = '死亡率',marker = 'o')
 
-## plt.plot(deaths_rate,color = 'lime',label = '死亡率',marker = 'o',linewidth=2,markersize=3)
+## plt.title('中国大陆治愈率 VS 死亡率')
 
-## plt.xlabel('时间',size = 30)
+## plt.xlabel('时间',size = 20)
 
-## plt.ylabel('数量',size = 30)
+## plt.ylabel('数量',size = 20)
 
-## plt.xticks(rotation = 45,size = 25)
+## plt.xticks(rotation = 45,size = 10)
 
-## plt.yticks(size =30)
+## plt.yticks(size =15)
 
 ## plt.legend(loc = 'upper left',fontsize = 20)
 

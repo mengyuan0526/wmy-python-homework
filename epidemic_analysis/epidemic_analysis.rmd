@@ -307,9 +307,20 @@ others_countries = others.rename(columns = {last_update:'confirmed'})
 others_countries[others_countries.index==94]
 others_countries.loc['94'] = ['Mainland China',30.9756,112.2707,confirmed_China[-1],recovered_China[-1],deaths_China[-1]]
 others_countries
-others_countries.to_csv("./otherscountries.csv")
+#others_countries.to_csv("./otherscountries.csv")
 ```
-
+| Country/Region | Lat |   Long   |   confirmed   | recovered | death |
+| :------------- | :-----: |   :----:   |   :--- | :----- | :------: |
+| Thailand	     | 15.0000 |	101.0000	|  43	 |  31  |  	1   |
+|  Japan	       | 36.0000 |	138.0000	|  274  | 	32 |	6   |
+|South Korea	   |  36.0000	|  128.0000	|  4335	|  30	|  28  |
+|Taiwan	         |  23.7000	| 121.0000	|   41	|  12	|   1    |
+| US	           |  47.6062	| -122.3321	|   14	|  1	|   5   |
+| ...	           |    ...	  |    ...	  |  ...	| ...	|  ...	|
+|US	             |  27.3364	|  -82.5307	|   1	  |  0	|   0   |
+|US	             |38.5780	  |-122.9888	|1	    |0	  |0      |
+|US	             |45.7750	  |-118.7606	|1	    |0	  |0      |
+|Mainland China	 |30.9756	  |112.2707	  |80026	|44810 |	2912 |
 
 然后开始正式构建地图。定义一个world_map对象；location的格式为[纬度,经度]；zoom_start表示初始地图的缩放尺寸，数值越大放大程度越大；tiles为地图类型，用于控制绘图调用的地图样式，默认为'OpenStreetMap'，也有一些其他的内建地图样式，如'Stamen  Terrain'、'Stamen Toner'、'Mapbox Bright'、'Mapbox Control Room'等；也可以传入'None'来绘制一个没有风格的朴素地图，或传入一个URL来使用其它的自选osm。然后往world_map里添加其他元素，注意这里的for循环和最后的add_to是把经纬度点的信息一个一个的加进去
 ```{python}
@@ -336,7 +347,7 @@ knitr::include_graphics("./world_map.png")
 ```{python}
 import plotly.express as px
 confirmed = confirmed.melt(id_vars = ['Province/State', 'Country/Region', 'Lat', 'Long'], var_name='date',value_name = 'confirmed')
-confirmed.to_csv("./confirmedmelt.csv")
+#confirmed.to_csv("./confirmedmelt.csv")
 ```
 
 主要参数说明
@@ -371,7 +382,11 @@ deaths.rename(columns={'Country/Region': 'country', 'Province/State': 'province'
 merge_on = ['province', 'country', 'date']
 all_data = confirmed.merge(deaths[merge_on + ['deaths']], how='left', on=merge_on).\
   merge(recovered[merge_on + ['recovered']], how='left', on=merge_on)
-all_data
+ all_data.to_csv("alldata.csv")
+
+
+
+
 ```
 
 

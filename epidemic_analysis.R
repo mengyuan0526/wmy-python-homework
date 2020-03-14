@@ -4,6 +4,8 @@
 
 ## import matplotlib.pyplot as plt
 
+## import matplotlib.ticker as tkr
+
 ## confirmed = pd.read_csv('../data/COVID-20/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv')
 
 ## recovered = pd.read_csv('../data/COVID-20/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv')
@@ -11,9 +13,7 @@
 ## deaths = pd.read_csv('../data/COVID-20/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv')
 
 
-## c1 = confirmed.head(5)
-
-## c1.to_csv('c1.csv')
+## confirmed.head(5)
 
 
 ## recovered.head(5)
@@ -41,7 +41,7 @@
 ## 
 ## #计算出每日所有地区新冠肺炎的确诊数，治愈数，死亡数
 
-## plt.figure(figsize=(18,10))
+## fig,ax = plt.subplots()
 
 ## all_confirmed = np.sum(confirmed.iloc[:,4:])
 
@@ -55,42 +55,50 @@
 
 ## all_deaths.index = [d[:-3] for d in all_deaths.index]
 
-## plt.plot(all_confirmed,color = 'red',label = '确诊',marker = 'o',linewidth=2,markersize=3)
+## ax.plot(all_confirmed,color = 'red',label = '确诊',marker = 'o',linewidth=1,markersize=3)
 
-## plt.plot(all_recovered,color = 'blue',label = '治愈',marker = 'o',linewidth=2,markersize=3)
+## ax.plot(all_recovered,color = 'blue',label = '治愈',marker = 'o',linewidth=1,markersize=3)
 
-## plt.plot(all_deaths,color = 'lime',label = '死亡',marker = 'o',linewidth=2,markersize=3)
+## ax.plot(all_deaths,color = 'lime',label = '死亡',marker = 'o',linewidth=1,markersize=3)
 
-## plt.xticks(rotation = 45,size = 20)
+## ax.xaxis.set_major_locator(tkr.MultipleLocator(2.0))
 
-## plt.yticks(size = 20)
+## ax.xaxis.set_minor_locator(tkr.MultipleLocator(1.0))
 
-## plt.xlabel('时间',size = 30)
+## plt.xticks(rotation = 45)
 
-## plt.ylabel('数目',size = 30)
+## plt.yticks()
 
-## plt.legend(loc = 'upper left',fontsize = 15)
+## plt.xlabel('时间')
+
+## plt.ylabel('数目')
+
+## plt.legend(loc = 'upper left',fontsize = 10)
 
 ## plt.tight_layout()
 
 ## plt.show()
 
 
-## plt.figure(figsize=(18,10))
+## fig,ax = plt.subplots()
 
 ## death_rate = (all_deaths/all_confirmed)*100
 
 ## death_rate
 
-## plt.plot(death_rate,color = 'lime',label = '死亡',marker = 'o',linewidth=2,markersize=3)
+## ax.plot(death_rate,color = 'lime',label = '死亡',marker = 'o',linewidth=1,markersize=3)
 
-## plt.xticks(rotation = 45,size = 25)
+## ax.xaxis.set_major_locator(tkr.MultipleLocator(2.0))
 
-## plt.yticks(size = 30)
+## ax.xaxis.set_minor_locator(tkr.MultipleLocator(1.0))
 
-## plt.xlabel('时间',fontsize = 30)
+## plt.xticks(rotation = 45)
 
-## plt.ylabel('死亡率',fontsize = 30)
+## plt.yticks()
+
+## plt.xlabel('时间')
+
+## plt.ylabel('死亡率')
 
 ## plt.tight_layout()
 
@@ -111,10 +119,25 @@
 
 ## China_cases
 
+## China_cases.to_csv('./Chinacases.csv')
+
+## ----Chinacases,echo = F,results='markup',cache=F------------------------
+library("kableExtra")
+library('utils')
+Chinacases <- read.csv("D:/github_repo/wmy-python-homework/epidemic_analysis/Chinacases.csv")
+colnames(Chinacases) <- c("省份","确诊数","治愈数","死亡数")
+knitr::kable(Chinacases,row.names=F,align=c("l","c","c","c"),caption="中国大陆各省疫情
+数据",longtable=TRUE,booktabs=TRUE,escape=F,linesep = "")%>%
+kable_styling(latex_options = c("striped", "scale_down", "repeat_header",
+"hold_position"),repeat_header_text = "(续)")%>%
+    kable_styling(full_width = T) %>%
+    column_spec(1, width = c("4.5cm"))
+
+
 
 ## Mianland_China = China_cases.sort_values(by='confirmed',ascending=True)
 
-## Mianland_China.plot(kind='barh',figsize=(20,30),color = ['red','blue','lime'],width = 1,rot = 2)
+## Mianland_China.plot(kind='barh',figsize=(20,30),color = ['red','blue','lime'],width = 1)
 
 ## plt.xlabel('省/市',size = 30)
 
@@ -157,22 +180,31 @@
 
 ## #接下来画图
 
-## #plt.figure(figsize=(10,18))
+## fig,ax = plt.subplots()
 
-## plt.plot(recover_rate,color = 'blue',label = '治愈率',marker = 'o',linewidth=2,markersize=3)
+## ax.plot(recover_rate,color = 'blue',label = '治愈率',marker = 'o',linewidth=1,markersize=3)
 
-## plt.plot(deaths_rate,color = 'lime',label = '死亡率',marker = 'o',linewidth=2,markersize=3)
+## ax.plot(deaths_rate,color = 'lime',label = '死亡率',marker = 'o',linewidth=1,markersize=3)
 
-## plt.xlabel('时间',size = 30)
+## ax.xaxis.set_major_locator(tkr.MultipleLocator(2.0))
 
-## plt.ylabel('数量',size = 30)
+## ax.xaxis.set_minor_locator(tkr.MultipleLocator(1.0))
 
-## plt.xticks(rotation = 45,size = 25)
+## plt.xlabel('时间')
 
-## plt.yticks(size =30)
+## plt.ylabel('数量')
+
+## plt.xticks(rotation = 45)
+
+## plt.yticks()
 
 ## plt.legend(loc = 'upper left',fontsize = 20)
 
+## plt.tight_layout()
+
+## plt.show()
+
+## 
 
 ## confirmed_others = confirmed[confirmed['Country/Region'] != 'Mainland China']
 
@@ -192,21 +224,33 @@
 
 ## #接下来画图
 
-## plt.plot(recover_rate_others,color = 'blue',label = '治愈率',marker = 'o')
+## fig,ax = plt.subplots()
 
-## plt.plot(deaths_rate_others,color = 'lime',label = '死亡率',marker = 'o')
+## recover_rate_others.index = [d[:-3] for d in recover_rate_others.index]
 
-## plt.title('其他地区治愈率 VS 死亡率',size = 30)
+## deaths_rate_others.index = [d[:-3] for d in deaths_rate_others.index]
 
-## plt.xlabel('时间',size = 20)
+## ax.plot(recover_rate_others,color = 'blue',label = '治愈率',marker = 'o',linewidth=1,markersize=3)
 
-## plt.ylabel('数量',size = 20)
+## ax.plot(deaths_rate_others,color = 'lime',label = '死亡率',marker = 'o',linewidth=1,markersize=3)
 
-## plt.xticks(rotation = 45,size = 10)
+## ax.xaxis.set_major_locator(tkr.MultipleLocator(2.0))
 
-## plt.yticks(size =15)
+## ax.xaxis.set_minor_locator(tkr.MultipleLocator(1.0))
 
-## plt.legend(loc = 'upper left',fontsize = 20)
+## plt.xlabel('时间')
+
+## plt.ylabel('数量')
+
+## plt.xticks(rotation = 45)
+
+## plt.yticks()
+
+## plt.legend(loc = 'upper left',fontsize=15)
+
+## plt.tight_layout()
+
+## plt.show()
 
 
 ## others = confirmed[['Country/Region',last_update]][confirmed['Country/Region'] != 'Mainland China']
@@ -224,19 +268,21 @@
 
 ## #接着画图
 
-## others_countries.sort_values(by = 'confirmed',ascending = True).plot(kind='barh',figsize=(20,30),color = ['red','blue','lime'], width=1,rot=2)
+## others_countries.sort_values(by = 'confirmed',ascending = True).plot(kind='barh',figsize=(20,30),color = ['red','blue','lime'], width=1)
 
-## plt.title('世界其他地区疫情数量', size=30)
+## plt.ylabel('Country/Region')
 
-## plt.ylabel('Country/Region',size = 20)
+## plt.xlabel('数量')
 
-## plt.xlabel('数量',size = 20)
+## plt.yticks()
 
-## plt.yticks(size=10)
-
-## plt.xticks(size=15)
+## plt.xticks()
 
 ## plt.legend(bbox_to_anchor=(0.95,0.95),fontsize = 20)
+
+## plt.tight_layout()
+
+## plt.show()
 
 ## 
 
@@ -250,14 +296,16 @@
 
 ## others_countries = others.rename(columns = {last_update:'confirmed'})
 
+## others_countries[others_countries.index==94]
 
-## #然后开始正式构建地图
+## others_countries.loc['94'] = ['Mainland China',30.9756,112.2707,confirmed_China[-1],recovered_China[-1],deaths_China[-1]]
 
-## #定义一个world_map对象；location的格式为[纬度,经度]；zoom_start表示初始地图的缩放尺寸，数值越大放大程度越大；tiles为地图类型，用于控制绘图调用的地图样式，默认为'OpenStreetMap'，也有一些其他的内建地图样式，如'Stamen  Terrain'、'Stamen Toner'、'Mapbox Bright'、'Mapbox Control Room'等；也可以传入'None'来绘制一个没有风格的朴素地图，或传入一个URL来使用其它的自选osm。
+## others_countries
 
-## #然后往world_map里添加其他元素，注意这里的for循环和最后的add_to是把经纬度点的信息一个一个的加进去
+## others_countries.to_csv("./otherscountries.csv")
 
-## world_map = folium.Map(location=[10,-20],zoom_start=2.3,tiles='Stamen Toner')
+
+## world_map = folium.Map(location=[10,-20],zoom_start=2.3,tiles='Stamen Terrain')
 
 ## 
 ## for lat, lon, value, name in zip(others_countries['Lat'],others_countries['Long'],others_countries['confirmed'],others_countries['Country/Region']):
@@ -276,16 +324,23 @@
 
 ## world_map
 
-## 
+## #world_map.save("worldmap.html")
+
+## #import webbrowser
+
+## #webbrowser.open("worldmap.html")
+
+
+## ----fig1,eval=T, echo=F,out.width="90%", fig.align='center',fig.cap="全球地区疫情扩散图",dev="png",results='markup'----
+knitr::include_graphics("./world_map.png")
+
 
 ## import plotly.express as px
 
 ## confirmed = confirmed.melt(id_vars = ['Province/State', 'Country/Region', 'Lat', 'Long'], var_name='date',value_name = 'confirmed')
 
-## confirmed
+## confirmed.to_csv("./confirmedmelt.csv")
 
-
-## #date列转换成datetime格式的数据
 
 ## confirmed['date_dt'] = pd.to_datetime(confirmed.date,format='%m/%d/%y')
 
@@ -296,8 +351,6 @@
 ## confirmed
 
 
-## #治愈数据
-
 ## recovered = recovered.melt(id_vars = ['Province/State', 'Country/Region', 'Lat', 'Long'], var_name='date',value_name = 'recovered')
 
 ## recovered['date_dt'] = pd.to_datetime(recovered.date, format="%m/%d/%y")
@@ -306,7 +359,6 @@
 
 ## recovered.rename(columns={'Country/Region': 'country', 'Province/State': 'province'}, inplace=True)
 
-## #死亡数据
 
 ## deaths = deaths.melt(id_vars = ['Province/State', 'Country/Region', 'Lat', 'Long'], var_name='date', value_name = 'deaths')
 
@@ -316,7 +368,7 @@
 
 ## deaths.rename(columns={'Country/Region': 'country', 'Province/State': 'province'}, inplace=True)
 
-## 
+
 ## merge_on = ['province', 'country', 'date']
 
 ## all_data = confirmed.merge(deaths[merge_on + ['deaths']], how='left', on=merge_on).\
@@ -339,11 +391,13 @@
 
 ##                      hover_data=['confirmed', 'deaths', 'recovered'],
 
-##                      projection="natural earth",animation_frame="date_dt",title='亚洲地区疫情扩散图')
+##                      projection="natural earth",animation_frame="date_dt")
 
 ## fig.update(layout_coloraxis_showscale=False)
 
 ## fig.show()
 
-## 
-## 
+
+## ----fig,echo=F,fig.cap='亚洲地区疫情扩散图',outwidth="90%",fig.align="center",dev='png',results='makeup'----
+knitr::include_graphics("./fig.png")
+

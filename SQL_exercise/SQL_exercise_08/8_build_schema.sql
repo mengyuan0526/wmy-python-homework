@@ -1,5 +1,7 @@
 -- The_Hospital
-
+DROP DATABASE db8;
+CREATE database db8;
+\c db8;
 DROP TABLE IF EXISTS Physician;
 CREATE TABLE Physician (
   EmployeeID INTEGER NOT NULL,
@@ -23,7 +25,7 @@ DROP TABLE IF EXISTS Affiliated_With;
 CREATE TABLE Affiliated_With (
   Physician INTEGER NOT NULL,
   Department INTEGER NOT NULL,
-  PrimaryAffiliation BOOLEAN NOT NULL,
+  PrimaryAffiliation INTEGER NOT NULL,
   CONSTRAINT fk_Affiliated_With_Physician_EmployeeID FOREIGN KEY(Physician) REFERENCES Physician(EmployeeID),
   CONSTRAINT fk_Affiliated_With_Department_DepartmentID FOREIGN KEY(Department) REFERENCES Department(DepartmentID),
   PRIMARY KEY(Physician, Department)
@@ -40,8 +42,8 @@ DROP TABLE IF EXISTS Trained_In;
 CREATE TABLE Trained_In (
   Physician INTEGER NOT NULL,
   Treatment INTEGER NOT NULL,
-  CertificationDate DATETIME NOT NULL,
-  CertificationExpires DATETIME NOT NULL,
+  CertificationDate date NOT NULL,
+  CertificationExpires date NOT NULL,
   CONSTRAINT fk_Trained_In_Physician_EmployeeID FOREIGN KEY(Physician) REFERENCES Physician(EmployeeID),
   CONSTRAINT fk_Trained_In_Procedures_Code FOREIGN KEY(Treatment) REFERENCES Procedures(Code),
   PRIMARY KEY(Physician, Treatment)
@@ -63,7 +65,7 @@ CREATE TABLE Nurse (
   EmployeeID INTEGER PRIMARY KEY NOT NULL,
   Name VARCHAR(30) NOT NULL,
   Position VARCHAR(30) NOT NULL,
-  Registered BOOLEAN NOT NULL,
+  Registered INTEGER NOT NULL,
   SSN INTEGER NOT NULL
 );
 
@@ -73,8 +75,8 @@ CREATE TABLE Appointment (
   Patient INTEGER NOT NULL,    
   PrepNurse INTEGER,
   Physician INTEGER NOT NULL,
-  Start DATETIME NOT NULL,
-  End DATETIME NOT NULL,
+  Starts DATE NOT NULL,
+  Ende DATE NOT NULL,
   ExaminationRoom TEXT NOT NULL,
   CONSTRAINT fk_Appointment_Patient_SSN FOREIGN KEY(Patient) REFERENCES Patient(SSN),
   CONSTRAINT fk_Appointment_Nurse_EmployeeID FOREIGN KEY(PrepNurse) REFERENCES Nurse(EmployeeID),
@@ -95,7 +97,7 @@ CREATE TABLE Prescribes (
   Physician INTEGER NOT NULL,
   Patient INTEGER NOT NULL, 
   Medication INTEGER NOT NULL, 
-  Date DATETIME NOT NULL,
+  Date date NOT NULL,
   Appointment INTEGER,  
   Dose VARCHAR(30) NOT NULL,
   PRIMARY KEY(Physician, Patient, Medication, Date),
@@ -118,7 +120,7 @@ CREATE TABLE Room (
   RoomType VARCHAR(30) NOT NULL,
   BlockFloor INTEGER NOT NULL,  
   BlockCode INTEGER NOT NULL,  
-  Unavailable BOOLEAN NOT NULL,
+  Unavailable INTEGER NOT NULL,
   CONSTRAINT fk_Room_Block_PK FOREIGN KEY(BlockFloor, BlockCode) REFERENCES Block(BlockFloor, BlockCode)
 );
 
@@ -127,8 +129,8 @@ CREATE TABLE On_Call (
   Nurse INTEGER NOT NULL,
   BlockFloor INTEGER NOT NULL, 
   BlockCode INTEGER NOT NULL,
-  OnCallStart DATETIME NOT NULL,
-  OnCallEnd DATETIME NOT NULL,
+  OnCallStart date NOT NULL,
+  OnCallEnd date NOT NULL,
   PRIMARY KEY(Nurse, BlockFloor, BlockCode, OnCallStart, OnCallEnd),
   CONSTRAINT fk_OnCall_Nurse_EmployeeID FOREIGN KEY(Nurse) REFERENCES Nurse(EmployeeID),
   CONSTRAINT fk_OnCall_Block_Floor FOREIGN KEY(BlockFloor, BlockCode) REFERENCES Block(BlockFloor, BlockCode) 
@@ -139,8 +141,8 @@ CREATE TABLE Stay (
   StayID INTEGER PRIMARY KEY NOT NULL,
   Patient INTEGER NOT NULL,
   Room INTEGER NOT NULL,
-  StayStart DATETIME NOT NULL,
-  StayEnd DATETIME NOT NULL,
+  StayStart date NOT NULL,
+  StayEnd date NOT NULL,
   CONSTRAINT fk_Stay_Patient_SSN FOREIGN KEY(Patient) REFERENCES Patient(SSN),
   CONSTRAINT fk_Stay_Room_Number FOREIGN KEY(Room) REFERENCES Room(RoomNumber)
 );
@@ -150,7 +152,7 @@ CREATE TABLE Undergoes (
   Patient INTEGER NOT NULL,
   Procedures INTEGER NOT NULL,
   Stay INTEGER NOT NULL,
-  DateUndergoes DATETIME NOT NULL,
+  DateUndergoes date NOT NULL,
   Physician INTEGER NOT NULL,
   AssistingNurse INTEGER,
   PRIMARY KEY(Patient, Procedures, Stay, DateUndergoes),

@@ -10,4 +10,4 @@ SELECT * FROM has_clearance;
 SELECT name from client where accountnumber=(SELECT recipient from package where weight=1.5)
 
 -- 7.2 What is the total weight of all the packages that he sent?
-select sum(weight) from package left join client on package.sender=client.accountnumber where name='Al Gore is Head' and sender=accountnumber;
+SELECT sum(weight) FROM package WHERE sender=(SELECT accountnumber FROM client WHERE name='Al Gores Head');

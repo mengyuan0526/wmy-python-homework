@@ -32,7 +32,6 @@ Select a.name,a.lastname from employees a INNER JOIN departments b on a.departme
 -- 2.13 Select the departments with a budget larger than the average budget of all the departments.
 Select a.department,b.budget from employees a INNER JOIN departments b on a.department=b.code WHERE b.budget > (Select avg(budget) from departments);
 -- 2.14 Select the names of departments with more than two employees.
-Select name from departments where 
 Select b.name from employees a INNER JOIN departments b on a.department=b.code group by b.code HAVING count(a.name)>2; 
 -- 2.15 Very Important - Select the name and last name of employees working for departments with second lowest budget.
 Select a.name,a.lastname from employees a INNER join departments b on a.department=b.code WHERE b.budget=55000;
@@ -51,7 +50,10 @@ update employees set department=14 where department=77;
 -- 2.19 Delete from the table all employees in the IT department (code 14)
 Delete from employees where department=14;
 -- 2.20 Delete from the table all employees who work in departments with a
--- budget greater than or equal to $60,000.???
-Delete from employees a INNER JOIN on a.department=b.code  where b.budget=(Select budget from employees a INNER JOIN departments b on a.department=b.code where b.budget>=60000);
+-- budget greater than or equal to $60,000.
+Select * from employees;
+Select * from departments;
+Delete from employees WHERE department in (SELECT b.code FROM employees a INNER JOIN departments b on a.department=b.code where b.budget>=60000);
+
 -- 2.21 Delete from the table all employees.
 drop table employees;
